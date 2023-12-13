@@ -18,7 +18,6 @@ class PokemonTypes(Enum):
 
 names = ["Electric", "Flying"]
 
-PokemonTypes(PokemonTypes.ELECTRIC).value
 Electric = "Electric"
 Flying = "Flying"
 

@@ -33,6 +33,7 @@ def print_hi(name):
 
 
 def print_pokemon_types_and_HP(pokemon):
+    global pokemonStats
     print("Pokemon " + pokemon + " is: ")
     print(names[pokemonStats[pokemon][PokemonType].value])
     print(pokemonStats[pokemon][PokemonHP])
@@ -41,21 +42,22 @@ def print_pokemon_types_and_HP(pokemon):
     else:
         print("Not shiny")
 
+pokemonStats = {
+    Pikachu: {
+        PokemonType: PokemonTypes.ELECTRIC,
+        PokemonHP: 80,
+        IsShiny: False
+    },
+    Noivern: {
+        PokemonType: PokemonTypes.FLYING,
+        PokemonHP: 100,
+        IsShiny: True
+    }
+}
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    pokemonStats = {
-        Pikachu: {
-            PokemonType: PokemonTypes.ELECTRIC,
-            PokemonHP: 80,
-            IsShiny: False
-        },
-        Noivern: {
-            PokemonType: PokemonTypes.FLYING,
-            PokemonHP: 100,
-            IsShiny: True
-        }
-    }
+
     print_pokemon_types_and_HP(Pikachu)
     print_pokemon_types_and_HP(Noivern)
 

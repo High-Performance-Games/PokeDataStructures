@@ -24,8 +24,9 @@ Flying = "Flying"
 PokemonType = "PokemonType"
 PokemonHP = "PokemonHP"
 IsShiny = "IsShiny"
-
-
+Gender = "Gender"
+Male = "Male"
+Female = "Female"
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -36,6 +37,7 @@ def print_pokemon_types_and_HP(pokemon):
     print("Pokemon " + pokemon + " is: ")
     print(names[pokemonStats[pokemon][PokemonType].value])
     print(pokemonStats[pokemon][PokemonHP])
+    print(pokemonStats[pokemon][Gender])
     if pokemonStats[pokemon][IsShiny]:
         print("Shiny")
     else:
@@ -45,12 +47,14 @@ pokemonStats = {
     Pikachu: {
         PokemonType: PokemonTypes.ELECTRIC,
         PokemonHP: 80,
-        IsShiny: False
+        IsShiny: False,
+        Gender: Female
     },
     Noivern: {
         PokemonType: PokemonTypes.FLYING,
         PokemonHP: 100,
-        IsShiny: True
+        IsShiny: True,
+        Gender: Male
     }
 }
 
